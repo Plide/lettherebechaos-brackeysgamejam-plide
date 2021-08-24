@@ -8,9 +8,11 @@ clock = pygame.time.Clock()
 
 # LEVEL DESIGN
 rects = []
-rects.append(pygame.Rect(0, 200, 200, 50))
-rects.append(pygame.Rect(0, 282, 300, 50))
-rects.append(pygame.Rect(400, 310, 80, 50))
+rects.append(pygame.Rect(0, 200, 200, 3))
+rects.append(pygame.Rect(0, 282, 300, 3))
+rects.append(pygame.Rect(400, 310, 80, 3))
+for i in range(32767):
+    rects.append(pygame.Rect((i*2) % 480, math.floor(i / 480) + 200, 1, 1))
 
 # Screen stuff
 bg_color = 204, 255, 220
